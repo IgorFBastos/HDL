@@ -1,0 +1,112 @@
+V3 75
+FL /home/ise/ise_projs/Distribution_V3.3/3_MIPS_S_Prt/VHDL/MIPS_S_Prt.vhd 2025/07/02.22:30:29 P.20131013
+FL /home/ise/ise_projs/Distribution_V3.3/3_MIPS_S_Prt/VHDL/MIPS_S_withBRAMS.vhd 2025/05/31.11:37:54 P.20131013
+FL /home/ise/ise_projs/Distribution_V3.3/3_MIPS_S_Prt/VHDL/mult_div.vhd 2025/05/26.23:06:42 P.20131013
+FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd 2025/07/03.20:04:33 P.20131013
+EN work/dspl_drv 1751981314 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dspl_drv/dspl_drv 1751981315 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd \
+      EN work/dspl_drv 1751981314 CP with
+FL /home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd 2025/07/03.20:39:13 P.20131013
+EN work/program_memory 1751981306 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/program_memory/program_memory 1751981307 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd \
+      EN work/program_memory 1751981306 CP RAMB16_S36
+EN work/data_memory 1751981308 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/data_memory/data_memory 1751981309 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd \
+      EN work/data_memory 1751981308 CP RAMB16_S9
+FL /home/ise/ise_projs/trabalho_4/t4_p2/memory.vhd 2025/07/02.22:29:56 P.20131013
+FL /home/ise/ise_projs/trabalho_4/t4_p2/memoryCurto/memory.vhd 2025/07/02.23:17:14 P.20131013
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd 2025/07/03.20:24:14 P.20131013
+EN work/top_conts 1751981316 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top_conts/Behavioral 1751981317 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd \
+      EN work/top_conts 1751981316 CP work/MIPS_S_withBRAMS CP work/periferico \
+      CP work/dspl_drv
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd 2025/07/02.22:30:29 P.20131013
+PH work/p_MIPS_S 1751981293 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176
+EN work/reg32bits 1751981294 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PH work/p_MIPS_S 1751981293
+AR work/reg32bits/reg32bits 1751981295 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/reg32bits 1751981294
+EN work/reg_bank 1751981296 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PH work/p_MIPS_S 1751981293
+AR work/reg_bank/reg_bank 1751981297 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/reg_bank 1751981296 CP work/reg32bits
+EN work/alu 1751981298 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177 PH work/p_MIPS_S 1751981293
+AR work/alu/alu 1751981299 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/alu 1751981298 PB ieee/STD_LOGIC_SIGNED 1381692178
+EN work/datapath 1751981300 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_SIGNED 1381692178 \
+      PB ieee/std_logic_arith 1381692177 PH work/p_MIPS_S 1751981293
+AR work/datapath/datapath 1751981301 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/datapath 1751981300 CP adS CP work/reg_bank CP R3_in CP work/reg32bits \
+      CP op1 CP op2 CP work/alu CP work/divider CP work/multiplier CP D_Lo CP D_Hi \
+      CP MDR_in CP RESULT CP adD CP RIN
+EN work/control_unit 1751981302 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PH work/p_MIPS_S 1751981293
+AR work/control_unit/control_unit 1751981303 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/control_unit 1751981302 CP PC_in CP work/reg32bits
+EN work/MIPS_S 1751981304 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      PB ieee/std_logic_1164 1381692176 PH work/p_MIPS_S 1751981293
+AR work/MIPS_S/MIPS_S 1751981305 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd \
+      EN work/MIPS_S 1751981304 CP work/control_unit CP work/datapath
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_withBRAMS.vhd 2025/05/31.11:37:54 P.20131013
+EN work/MIPS_S_withBRAMs 1751981310 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_withBRAMS.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PH work/p_MIPS_S 1751981293
+AR work/MIPS_S_withBRAMs/MIPS_S_withBRAMs 1751981311 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_withBRAMS.vhd \
+      EN work/MIPS_S_withBRAMs 1751981310 CP IDMem_clock CP work/program_memory \
+      CP work/MIPS_S CP valid_d_address CP d_address_RAM CP data_in_RAM \
+      CP work/data_memory
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd 2025/05/26.23:06:42 P.20131013
+EN work/multiplier 1751981289 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/multiplier/multiplier 1751981290 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd \
+      EN work/multiplier 1751981289
+EN work/divider 1751981291 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/divider/divider 1751981292 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd \
+      EN work/divider 1751981291
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/periferico.vhd 2025/07/08.13:28:05 P.20131013
+EN work/periferico 1751981312 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/periferico.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/periferico/Behavioral 1751981313 \
+      FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/periferico.vhd \
+      EN work/periferico 1751981312
+FL /home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico2/top_conts.vhd 2025/07/03.20:24:14 P.20131013
+FL /home/ise/ise_projs/trabalho_4/t4_p3/periferico/periferico.vhd 2025/07/03.20:12:51 P.20131013

@@ -1,0 +1,3 @@
+vhdl isim_temp "display_driver.vhd"
+vhdl isim_temp "cron_debounce.vhd"
+vhdl isim_temp "cron_basq_PI.vhd"

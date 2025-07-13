@@ -1,0 +1,1591 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: top_conts.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_conts.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_conts"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : top_conts
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd" in Library work.
+Architecture multiplier of Entity multiplier is up to date.
+Architecture divider of Entity divider is up to date.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd" in Library work.
+Architecture reg32bits of Entity reg32bits is up to date.
+Architecture reg_bank of Entity reg_bank is up to date.
+Architecture alu of Entity alu is up to date.
+Architecture datapath of Entity datapath is up to date.
+Architecture control_unit of Entity control_unit is up to date.
+Architecture mips_s of Entity mips_s is up to date.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd" in Library work.
+Architecture program_memory of Entity program_memory is up to date.
+Architecture data_memory of Entity data_memory is up to date.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_withBRAMS.vhd" in Library work.
+Architecture mips_s_withbrams of Entity mips_s_withbrams is up to date.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/periferico.vhd" in Library work.
+Entity <periferico> compiled.
+Entity <periferico> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd" in Library work.
+Architecture dspl_drv of Entity dspl_drv is up to date.
+Compiling vhdl file "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd" in Library work.
+Architecture behavioral of Entity top_conts is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <top_conts> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MIPS_S_withBRAMs> in library <work> (architecture <MIPS_S_withBRAMs>) with generics.
+	LAST_D_ADDRESS = "00010000000000010001111111111111"
+	LAST_I_ADDRESS = "00000000010000000000011111111111"
+
+Analyzing hierarchy for entity <periferico> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <dspl_drv> in library <work> (architecture <dspl_drv>).
+
+Analyzing hierarchy for entity <program_memory> in library <work> (architecture <program_memory>).
+
+Analyzing hierarchy for entity <MIPS_S> in library <work> (architecture <MIPS_S>).
+
+Analyzing hierarchy for entity <data_memory> in library <work> (architecture <data_memory>).
+
+Analyzing hierarchy for entity <control_unit> in library <work> (architecture <control_unit>).
+
+Analyzing hierarchy for entity <datapath> in library <work> (architecture <datapath>).
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000010000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg_bank> in library <work> (architecture <reg_bank>).
+
+Analyzing hierarchy for entity <alu> in library <work> (architecture <alu>).
+
+Analyzing hierarchy for entity <divider> in library <work> (architecture <divider>) with generics.
+	N = 32
+
+Analyzing hierarchy for entity <multiplier> in library <work> (architecture <multiplier>) with generics.
+	N = 32
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00010000000000010010000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+Analyzing hierarchy for entity <reg32bits> in library <work> (architecture <reg32bits>) with generics.
+	INIT_VALUE = "00000000000000000000000000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <top_conts> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd" line 36: Unconnected output port 'reset_CPU' of component 'MIPS_S_withBRAMs'.
+WARNING:Xst:753 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd" line 36: Unconnected output port 'suspend_ack' of component 'MIPS_S_withBRAMs'.
+WARNING:Xst:753 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd" line 36: Unconnected output port 'bw_CPU' of component 'MIPS_S_withBRAMs'.
+WARNING:Xst:753 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd" line 36: Unconnected output port 'data_out_RAM' of component 'MIPS_S_withBRAMs'.
+Entity <top_conts> analyzed. Unit <top_conts> generated.
+
+Analyzing generic Entity <MIPS_S_withBRAMs> in library <work> (Architecture <MIPS_S_withBRAMs>).
+	LAST_D_ADDRESS = "00010000000000010001111111111111"
+	LAST_I_ADDRESS = "00000000010000000000011111111111"
+Entity <MIPS_S_withBRAMs> analyzed. Unit <MIPS_S_withBRAMs> generated.
+
+Analyzing Entity <program_memory> in library <work> (Architecture <program_memory>).
+    Set user-defined property "INIT =  000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_00 =  8D080000342800003C0110010810000524100000241100002412000024130000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_01 =  8D080000342800083C011001A11100008D080000342800043C011001A1100000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_02 =  162900031609000424090009A11300008D0800003428000C3C011001A1120000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_03 =  24100000160900082409000A221000010C100029081000281669000116490002" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_04 =  0810000522730001241200001649000222520001241100001629000522310001" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_05 =  000000000000000003E0000815A0FFFE21ADFFFF342D42403C01000F08100028" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "SRVAL =  000000000" for instance <programa> in unit <program_memory>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <programa> in unit <program_memory>.
+Entity <program_memory> analyzed. Unit <program_memory> generated.
+
+Analyzing Entity <MIPS_S> in library <work> (Architecture <MIPS_S>).
+Entity <MIPS_S> analyzed. Unit <MIPS_S> generated.
+
+Analyzing Entity <control_unit> in library <work> (Architecture <control_unit>).
+WARNING:Xst:1748 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd" line 783: VHDL Assertion Statement with non constant condition is ignored.
+Entity <control_unit> analyzed. Unit <control_unit> generated.
+
+Analyzing generic Entity <reg32bits.1> in library <work> (Architecture <reg32bits>).
+	INIT_VALUE = "00000000010000000000000000000000"
+Entity <reg32bits.1> analyzed. Unit <reg32bits.1> generated.
+
+Analyzing generic Entity <reg32bits.2> in library <work> (Architecture <reg32bits>).
+	INIT_VALUE = "00000000000000000000000000000000"
+Entity <reg32bits.2> analyzed. Unit <reg32bits.2> generated.
+
+Analyzing Entity <datapath> in library <work> (Architecture <datapath>).
+Entity <datapath> analyzed. Unit <datapath> generated.
+
+Analyzing Entity <reg_bank> in library <work> (Architecture <reg_bank>).
+Entity <reg_bank> analyzed. Unit <reg_bank> generated.
+
+Analyzing generic Entity <reg32bits.3> in library <work> (Architecture <reg32bits>).
+	INIT_VALUE = "00010000000000010010000000000000"
+Entity <reg32bits.3> analyzed. Unit <reg32bits.3> generated.
+
+Analyzing Entity <alu> in library <work> (Architecture <alu>).
+Entity <alu> analyzed. Unit <alu> generated.
+
+Analyzing generic Entity <divider> in library <work> (Architecture <divider>).
+	N = 32
+WARNING:Xst:819 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd" line 164: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <EA>, <Dvdend>, <Dvsor>
+Entity <divider> analyzed. Unit <divider> generated.
+
+Analyzing generic Entity <multiplier> in library <work> (Architecture <multiplier>).
+	N = 32
+WARNING:Xst:819 - "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd" line 73: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <EA>, <Mplier>, <Mpland>
+Entity <multiplier> analyzed. Unit <multiplier> generated.
+
+Analyzing Entity <data_memory> in library <work> (Architecture <data_memory>).
+    Set user-defined property "INIT =  000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000010101010" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "SRVAL =  000" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <mem_3> in unit <data_memory>.
+    Set user-defined property "INIT =  000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "SRVAL =  000" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <mem_2> in unit <data_memory>.
+    Set user-defined property "INIT =  000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000080808080" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "SRVAL =  000" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <mem_1> in unit <data_memory>.
+    Set user-defined property "INIT =  000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_00 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_00 =  0000000000000000000000000000000000000000000000000000000003020100" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "SRVAL =  000" for instance <mem_0> in unit <data_memory>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <mem_0> in unit <data_memory>.
+Entity <data_memory> analyzed. Unit <data_memory> generated.
+
+Analyzing Entity <periferico> in library <work> (Architecture <Behavioral>).
+Entity <periferico> analyzed. Unit <periferico> generated.
+
+Analyzing Entity <dspl_drv> in library <work> (Architecture <dspl_drv>).
+Entity <dspl_drv> analyzed. Unit <dspl_drv> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <periferico>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/periferico.vhd".
+WARNING:Xst:647 - Input <data_out_CPU<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4-bit register for signal <reg_centenas>.
+    Found 4-bit register for signal <reg_decimos>.
+    Found 4-bit register for signal <reg_dezenas>.
+    Found 4-bit register for signal <reg_unidades>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <periferico> synthesized.
+
+
+Synthesizing Unit <dspl_drv>.
+    Related source file is "/home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd".
+    Found 16x7-bit ROM for signal <selected_dig_4_1$rom0000>.
+    Found 4-bit register for signal <an>.
+    Found 4-bit 4-to-1 multiplexer for signal <an$mux0003>.
+    Found 1-bit register for signal <ck_1KHz>.
+    Found 15-bit adder for signal <ck_1KHz$addsub0000> created at line 84.
+    Found 15-bit up counter for signal <count_25K>.
+    Found 2-bit register for signal <dig_selection>.
+    Found 5-bit register for signal <selected_dig>.
+    Found 5-bit 4-to-1 multiplexer for signal <selected_dig$mux0003>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 Multiplexer(s).
+Unit <dspl_drv> synthesized.
+
+
+Synthesizing Unit <reg32bits_1>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 32-bit register for signal <Q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <reg32bits_1> synthesized.
+
+
+Synthesizing Unit <reg32bits_2>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 32-bit register for signal <Q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <reg32bits_2> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 32-bit comparator less for signal <menorS$cmp_lt0000> created at line 341.
+    Found 32-bit comparator less for signal <menorU$cmp_lt0000> created at line 339.
+    Found 32-bit addsub for signal <outalu$addsub0000>.
+    Found 32-bit shifter logical left for signal <outalu$shift0006> created at line 343.
+    Found 32-bit shifter arithmetic right for signal <outalu$shift0008> created at line 343.
+    Found 32-bit shifter logical right for signal <outalu$shift0010> created at line 343.
+    Found 32-bit shifter logical left for signal <outalu$shift0012> created at line 343.
+    Found 32-bit shifter arithmetic right for signal <outalu$shift0013> created at line 343.
+    Found 32-bit shifter logical right for signal <outalu$shift0014> created at line 343.
+    Found 32-bit xor2 for signal <outalu$xor0000> created at line 343.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   6 Combinational logic shifter(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <divider>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd".
+    Found finite state machine <FSM_0> for signal <EA>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | start                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | initialize                                     |
+    | Power Up State     | initialize                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 33-bit latch for signal <regB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit register for signal <Remaind>.
+    Found 1-bit register for signal <endop>.
+    Found 32-bit register for signal <Quot>.
+    Found 32-bit up counter for signal <count>.
+    Found 33-bit subtractor for signal <difference>.
+    Found 65-bit register for signal <regP>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred 130 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <divider> synthesized.
+
+
+Synthesizing Unit <multiplier>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/mult_div.vhd".
+    Found finite state machine <FSM_1> for signal <EA>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | start                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | initialize                                     |
+    | Power Up State     | initialize                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 33-bit latch for signal <regB>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 1-bit register for signal <endop>.
+    Found 64-bit register for signal <Product>.
+    Found 32-bit up counter for signal <count>.
+    Found 65-bit register for signal <regP>.
+    Found 33-bit adder for signal <regP_64_32$add0000> created at line 86.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred 130 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <multiplier> synthesized.
+
+
+Synthesizing Unit <reg32bits_3>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 32-bit register for signal <Q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <reg32bits_3> synthesized.
+
+
+Synthesizing Unit <program_memory>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd".
+Unit <program_memory> synthesized.
+
+
+Synthesizing Unit <data_memory>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p2/25mhz/memory.vhd".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <data_memory> synthesized.
+
+
+Synthesizing Unit <control_unit>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found finite state machine <FSM_2> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 24                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 9                                              |
+    | Clock              | ck                        (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | sfetch                                         |
+    | Power Up State     | sfetch                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <incpc>.
+    Found 1-bit register for signal <suspend_ack_intcu>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <control_unit> synthesized.
+
+
+Synthesizing Unit <reg_bank>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 32-bit 32-to-1 multiplexer for signal <DataRP1>.
+    Found 32-bit 32-to-1 multiplexer for signal <DataRP2>.
+    Summary:
+	inferred  64 Multiplexer(s).
+Unit <reg_bank> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+WARNING:Xst:647 - Input <IR_IN<31:26>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <uins.CY1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <uins.wpc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <uins.bw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <inst_Igroup> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit tristate buffer for signal <d_address>.
+    Found 32-bit tristate buffer for signal <data_out>.
+    Found 32-bit comparator equal for signal <jump$cmp_eq0000> created at line 517.
+    Found 33-bit comparator greatequal for signal <jump$cmp_ge0000> created at line 517.
+    Found 33-bit comparator lessequal for signal <jump$cmp_le0000> created at line 517.
+    Found 32-bit comparator not equal for signal <jump$cmp_ne0000> created at line 517.
+    Found 32-bit 4-to-1 multiplexer for signal <R3_in>.
+    Summary:
+	inferred   4 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred  64 Tristate(s).
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <MIPS_S>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_Prt.vhd".
+    Found 1-bit tristate buffer for signal <ce>.
+    Found 1-bit tristate buffer for signal <bw>.
+    Found 1-bit tristate buffer for signal <rw>.
+    Summary:
+	inferred   3 Tristate(s).
+Unit <MIPS_S> synthesized.
+
+
+Synthesizing Unit <MIPS_S_withBRAMs>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/vhdls_auxiliares/MIPS_S_withBRAMS.vhd".
+WARNING:Xst:647 - Input <d_address_Per<31:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <i_address<31:11>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <i_address<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit comparator greatequal for signal <valid_d_address$cmp_ge0000> created at line 169.
+    Found 32-bit comparator less for signal <valid_d_address$cmp_lt0000> created at line 169.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <MIPS_S_withBRAMs> synthesized.
+
+
+Synthesizing Unit <top_conts>.
+    Related source file is "/home/ise/ise_projs/trabalho_4/t4_p3/p3ComPeriferico/top_conts.vhd".
+Unit <top_conts> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 15-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 33-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+# Counters                                             : 3
+ 15-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 186
+ 1-bit register                                        : 134
+ 2-bit register                                        : 1
+ 32-bit register                                       : 44
+ 4-bit register                                        : 5
+ 5-bit register                                        : 1
+ 64-bit register                                       : 1
+# Latches                                              : 2
+ 33-bit latch                                          : 2
+# Comparators                                          : 8
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 3
+ 32-bit comparator not equal                           : 1
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator lessequal                           : 1
+# Multiplexers                                         : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 6
+ 32-bit shifter arithmetic right                       : 2
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 2
+# Tristates                                            : 5
+ 1-bit tristate buffer                                 : 3
+ 32-bit tristate buffer                                : 2
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <MIPS_SYSTEM_INST/I_MIPS_S/cu/PS/FSM> on signal <PS[1:3]> with gray encoding.
+--------------------
+ State  | Encoding
+--------------------
+ sfetch | 000
+ sreg   | 001
+ salu   | 011
+ swbk   | 101
+ sld    | 010
+ sst    | 110
+ sjump  | 111
+--------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/EA/FSM> on signal <EA[1:5]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ initialize | 00001
+ shift      | 00100
+ add        | 00010
+ finish     | 01000
+ endm       | 10000
+------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/EA/FSM> on signal <EA[1:5]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ initialize | 00001
+ shift      | 00010
+ addsub     | 00100
+ finish     | 01000
+ endd       | 10000
+------------------------
+WARNING:Xst:1710 - FF/Latch <Q_17> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_18> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_19> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_20> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_21> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_22> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_23> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_24> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_25> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_26> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_27> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_28> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_29> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_30> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_31> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <32>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <suspend_ack_intcu> (without init value) has a constant value of 0 in block <cu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_0> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_1> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_2> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_3> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_4> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_5> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_6> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_7> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_8> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_9> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_10> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_11> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_12> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_13> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_14> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_15> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q_16> (without init value) has a constant value of 0 in block <g1[0].g3.rx>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <dspl_drv>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_selected_dig_4_1_rom0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <dspl_drv> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 15-bit adder                                          : 1
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 33-bit adder                                          : 1
+ 33-bit subtractor                                     : 1
+# Counters                                             : 3
+ 15-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 1633
+ Flip-Flops                                            : 1633
+# Latches                                              : 2
+ 33-bit latch                                          : 2
+# Comparators                                          : 8
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 3
+ 32-bit comparator not equal                           : 1
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator lessequal                           : 1
+# Multiplexers                                         : 5
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 6
+ 32-bit shifter arithmetic right                       : 2
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 2
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <suspend_ack_intcu> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <selected_dig_0> (without init value) has a constant value of 1 in block <dspl_drv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <inst_Mult/regB_32> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <inst_Divd/regB_32> (without init value) has a constant value of 0 in block <datapath>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <inst_Mult/EA_FSM_FFd5> in Unit <datapath> is equivalent to the following FF/Latch, which will be removed : <inst_Divd/EA_FSM_FFd5> 
+WARNING:Xst:2170 - Unit alu : the following signal(s) form a combinatorial loop: outalu_shift0009<31>.
+WARNING:Xst:2042 - Unit MIPS_S_withBRAMs: 3 internal tristates are replaced by logic (pull-up yes): bw_CPU_int, ce_CPU_int, rw_CPU_int.
+WARNING:Xst:2042 - Unit datapath: 64 internal tristates are replaced by logic (pull-up yes): d_address<0>, d_address<10>, d_address<11>, d_address<12>, d_address<13>, d_address<14>, d_address<15>, d_address<16>, d_address<17>, d_address<18>, d_address<19>, d_address<1>, d_address<20>, d_address<21>, d_address<22>, d_address<23>, d_address<24>, d_address<25>, d_address<26>, d_address<27>, d_address<28>, d_address<29>, d_address<2>, d_address<30>, d_address<31>, d_address<3>, d_address<4>, d_address<5>, d_address<6>, d_address<7>, d_address<8>, d_address<9>, data_out<0>, data_out<10>, data_out<11>, data_out<12>, data_out<13>, data_out<14>, data_out<15>, data_out<16>, data_out<17>, data_out<18>, data_out<19>, data_out<1>, data_out<20>, data_out<21>, data_out<22>, data_out<23>, data_out<24>, data_out<25>, data_out<26>, data_out<27>, data_out<28>, data_out<29>, data_out<2>, data_out<30>, data_out<31>, data_out<3>, data_out<4>, data_out<5>, data_out<6>, data_out<7>, data_out<8>, data_out<9>.
+
+Optimizing unit <top_conts> ...
+
+Optimizing unit <periferico> ...
+
+Optimizing unit <dspl_drv> ...
+
+Optimizing unit <reg32bits_1> ...
+
+Optimizing unit <reg32bits_2> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <reg32bits_3> ...
+
+Optimizing unit <data_memory> ...
+
+Optimizing unit <control_unit> ...
+
+Optimizing unit <reg_bank> ...
+
+Optimizing unit <datapath> ...
+
+Optimizing unit <MIPS_S_withBRAMs> ...
+WARNING:Xst:1710 - FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_31> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_30> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_29> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_28> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_27> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_26> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_25> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_24> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_23> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_22> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_21> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_20> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_19> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_18> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_17> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_16> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_15> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_14> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_13> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_12> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_11> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_10> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_9> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_8> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_7> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_6> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_5> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_4> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_3> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_2> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_1> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/REGS/g1[0].g3.rx/Q_0> (without init value) has a constant value of 0 in block <top_conts>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <MIPS_SYSTEM_INST/I_MIPS_S/dp/R3reg/Q_31> in Unit <top_conts> is equivalent to the following 3 FFs/Latches, which will be removed : <MIPS_SYSTEM_INST/I_MIPS_S/dp/R3reg/Q_30> <MIPS_SYSTEM_INST/I_MIPS_S/dp/R3reg/Q_29> <MIPS_SYSTEM_INST/I_MIPS_S/dp/R3reg/Q_28> 
+Found area constraint ratio of 100 (+ 5) on block top_conts, actual ratio is 26.
+FlipFlop MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_16 has been replicated 1 time(s)
+FlipFlop MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_17 has been replicated 1 time(s)
+FlipFlop MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_18 has been replicated 1 time(s)
+FlipFlop MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_19 has been replicated 1 time(s)
+FlipFlop MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_20 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1692
+ Flip-Flops                                            : 1692
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : top_conts.ngr
+Top Level Output File Name         : top_conts
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 5128
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 124
+#      LUT2                        : 191
+#      LUT2_D                      : 3
+#      LUT2_L                      : 2
+#      LUT3                        : 1776
+#      LUT3_D                      : 69
+#      LUT3_L                      : 50
+#      LUT4                        : 939
+#      LUT4_D                      : 133
+#      LUT4_L                      : 138
+#      MUXCY                       : 340
+#      MUXF5                       : 680
+#      MUXF6                       : 257
+#      MUXF7                       : 128
+#      MUXF8                       : 64
+#      VCC                         : 1
+#      XORCY                       : 222
+# FlipFlops/Latches                : 1756
+#      FDC                         : 60
+#      FDCE                        : 243
+#      FDCP                        : 1
+#      FDCPE                       : 63
+#      FDE                         : 4
+#      FDP                         : 5
+#      FDPE                        : 2
+#      FDRE                        : 1310
+#      FDSE                        : 4
+#      LDE_1                       : 64
+# RAMS                             : 5
+#      RAMB16_S36                  : 1
+#      RAMB16_S9                   : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 1
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                     2291  out of   8672    26%  
+ Number of Slice Flip Flops:           1756  out of  17344    10%  
+ Number of 4 input LUTs:               3435  out of  17344    19%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    250     5%  
+ Number of BRAMs:                         5  out of     28    17%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+Clock Signal                                                                       | Clock buffer(FF name)                                 | Load  |
+-----------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+clock                                                                              | BUFGP                                                 | 1687  |
+DISPLAY_DRIVER_INST/ck_1KHz                                                        | NONE(DISPLAY_DRIVER_INST/selected_dig_4)              | 10    |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/rst_muldiv1(MIPS_SYSTEM_INST/I_MIPS_S/dp/rst_muldiv:O)| BUFG(*)(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regB_0)| 64    |
+-----------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+Control Signal                                                                                                   | Buffer(FF name)                                         | Load  |
+-----------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_32_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0_and000011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/Quot_0)     | 260   |
+reset                                                                                                            | IBUF                                                    | 41    |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/rst_muldiv1(MIPS_SYSTEM_INST/I_MIPS_S/dp/rst_muldiv:O)                              | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/EA_FSM_FFd1)| 9     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_0)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_10)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_11)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_12)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_13)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_14)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_15)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_16)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_17)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_18)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_19)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_1)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_20)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_21)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_22)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_23)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_24)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_25)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_26)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_27)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_28)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_29)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_2)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_30)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_31)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_3)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_4)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_5)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_6)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_7)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_8)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Divd/regP_9)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_0)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_10)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_11)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_12)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_13)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_14)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_15)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_16)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_17)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_18)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_19)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_1)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_20)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_21)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_22)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_23)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_24)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_25)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_26)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_27)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_28)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_29)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_2)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_30)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31_and00001:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31_and00011:O)| NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_31)    | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_3)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_4)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_5)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_6)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_7)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_8)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9_and0000(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9_and00001:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9)     | 1     |
+MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9_and0001(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9_and00011:O)  | NONE(MIPS_SYSTEM_INST/I_MIPS_S/dp/inst_Mult/regP_9)     | 1     |
+-----------------------------------------------------------------------------------------------------------------+---------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 26.602ns (Maximum Frequency: 37.592MHz)
+   Minimum input arrival time before clock: 4.474ns
+   Maximum output required time after clock: 5.870ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 26.602ns (frequency: 37.592MHz)
+  Total number of paths / destination ports: 64979696 / 3390
+-------------------------------------------------------------------------
+Delay:               13.301ns (Levels of Logic = 8)
+  Source:            MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_30 (FF)
+  Destination:       MIPS_SYSTEM_INST/D_mem/mem_3 (RAM)
+  Source Clock:      clock rising
+  Destination Clock: clock falling
+
+  Data Path: MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_30 to MIPS_SYSTEM_INST/D_mem/mem_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            15   0.591   1.192  MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_30 (MIPS_SYSTEM_INST/I_MIPS_S/cu/IR_reg/Q_30)
+     LUT2_D:I0->LO         1   0.704   0.104  MIPS_SYSTEM_INST/I_MIPS_S/cu/i<3>73 (N1322)
+     LUT4:I3->O           17   0.704   1.055  MIPS_SYSTEM_INST/I_MIPS_S/cu/i_cmp_eq000011 (MIPS_SYSTEM_INST/I_MIPS_S/cu/N37)
+     LUT4_D:I3->O          5   0.704   0.668  MIPS_SYSTEM_INST/I_MIPS_S/cu/i<2>21 (MIPS_SYSTEM_INST/I_MIPS_S/cu/N43)
+     LUT4:I2->O            3   0.704   0.535  MIPS_SYSTEM_INST/I_MIPS_S/cu/i<2>311 (MIPS_SYSTEM_INST/I_MIPS_S/cu/N88)
+     LUT4:I3->O           34   0.704   1.267  MIPS_SYSTEM_INST/I_MIPS_S/cu/i<4>119 (MIPS_SYSTEM_INST/I_MIPS_S/uins_i<4>)
+     LUT4:I3->O            6   0.704   0.673  MIPS_SYSTEM_INST/bw_RAM19 (MIPS_SYSTEM_INST/bw_RAM19)
+     LUT4_D:I3->O         11   0.704   0.937  MIPS_SYSTEM_INST/bw_RAM47 (MIPS_SYSTEM_INST/bw_RAM)
+     LUT4:I3->O            1   0.704   0.420  MIPS_SYSTEM_INST/D_mem/d_in_mem2<2>1 (MIPS_SYSTEM_INST/D_mem/d_in_mem2<2>)
+     RAMB16_S9:DI2             0.227          MIPS_SYSTEM_INST/D_mem/mem_2
+    ----------------------------------------
+    Total                     13.301ns (6.450ns logic, 6.851ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DISPLAY_DRIVER_INST/ck_1KHz'
+  Clock period: 3.082ns (frequency: 324.465MHz)
+  Total number of paths / destination ports: 22 / 10
+-------------------------------------------------------------------------
+Delay:               3.082ns (Levels of Logic = 2)
+  Source:            DISPLAY_DRIVER_INST/dig_selection_0 (FF)
+  Destination:       DISPLAY_DRIVER_INST/selected_dig_4 (FF)
+  Source Clock:      DISPLAY_DRIVER_INST/ck_1KHz rising
+  Destination Clock: DISPLAY_DRIVER_INST/ck_1KHz rising
+
+  Data Path: DISPLAY_DRIVER_INST/dig_selection_0 to DISPLAY_DRIVER_INST/selected_dig_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.591   1.158  DISPLAY_DRIVER_INST/dig_selection_0 (DISPLAY_DRIVER_INST/dig_selection_0)
+     LUT3:I0->O            1   0.704   0.000  DISPLAY_DRIVER_INST/Mmux_selected_dig_mux0003_3 (DISPLAY_DRIVER_INST/Mmux_selected_dig_mux0003_3)
+     MUXF5:I1->O           1   0.321   0.000  DISPLAY_DRIVER_INST/Mmux_selected_dig_mux0003_2_f5 (DISPLAY_DRIVER_INST/selected_dig_mux0003<1>)
+     FDE:D                     0.308          DISPLAY_DRIVER_INST/selected_dig_1
+    ----------------------------------------
+    Total                      3.082ns (1.924ns logic, 1.158ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'DISPLAY_DRIVER_INST/ck_1KHz'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.474ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       DISPLAY_DRIVER_INST/selected_dig_4 (FF)
+  Destination Clock: DISPLAY_DRIVER_INST/ck_1KHz rising
+
+  Data Path: reset to DISPLAY_DRIVER_INST/selected_dig_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1357   1.218   1.410  reset_IBUF (reset_IBUF)
+     INV:I->O              4   0.704   0.587  DISPLAY_DRIVER_INST/reset_inv1_INV_0 (DISPLAY_DRIVER_INST/reset_inv)
+     FDE:CE                    0.555          DISPLAY_DRIVER_INST/selected_dig_1
+    ----------------------------------------
+    Total                      4.474ns (2.477ns logic, 1.997ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 1314 / 1314
+-------------------------------------------------------------------------
+Offset:              3.539ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       MIPS_SYSTEM_INST/I_MIPS_S/dp/RMDR/Q_31 (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to MIPS_SYSTEM_INST/I_MIPS_S/dp/RMDR/Q_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1357   1.218   1.410  reset_IBUF (reset_IBUF)
+     FDRE:R                    0.911          MIPS_SYSTEM_INST/I_MIPS_S/cu/PC_reg/Q_0
+    ----------------------------------------
+    Total                      3.539ns (2.129ns logic, 1.410ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'DISPLAY_DRIVER_INST/ck_1KHz'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              5.870ns (Levels of Logic = 2)
+  Source:            DISPLAY_DRIVER_INST/selected_dig_2 (FF)
+  Destination:       dec_ddp<7> (PAD)
+  Source Clock:      DISPLAY_DRIVER_INST/ck_1KHz rising
+
+  Data Path: DISPLAY_DRIVER_INST/selected_dig_2 to dec_ddp<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.591   0.883  DISPLAY_DRIVER_INST/selected_dig_2 (DISPLAY_DRIVER_INST/selected_dig_2)
+     LUT4:I0->O            1   0.704   0.420  DISPLAY_DRIVER_INST/Mrom_selected_dig_4_1_rom000021 (dec_ddp_5_OBUF)
+     OBUF:I->O                 3.272          dec_ddp_5_OBUF (dec_ddp<5>)
+    ----------------------------------------
+    Total                      5.870ns (4.567ns logic, 1.303ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 37.00 secs
+Total CPU time to Xst completion: 9.70 secs
+ 
+--> 
+
+
+Total memory usage is 705304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

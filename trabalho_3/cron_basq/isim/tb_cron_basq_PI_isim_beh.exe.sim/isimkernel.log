@@ -1,0 +1,10 @@
+Command line:
+   tb_cron_basq_PI_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56049
+
+Mon Jun  9 17:26:40 2025
+
+
+ Elaboration Time: 0.13 sec

@@ -1,0 +1,28 @@
+ISim log file
+Running: /home/ise/ise_projs/ProjetoAtualiado/tb_cron_basq_PI_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/ise_projs/ProjetoAtualiado/tb_cron_basq_PI_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 200ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 189106635 ns : File "/home/ise/ise_projs/ProjetoAtualiado/TB_cron_basq_PI.vhd" Line 78
+# restart
+# run 1,2ms
+Incorrect usage of command 'run'
+Usage: run [ all | continue | <<time> [<unit>]> ]
+for detailed help use 'help run'
+# run 1ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

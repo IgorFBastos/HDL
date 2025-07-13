@@ -1,0 +1,25 @@
+V3 15
+FL /home/ise/ise_projs/ProjetoAtualiado/cron_basq_PI.vhd 2025/06/09.13:01:08 P.20131013
+FL /home/ise/ise_projs/ProjetoAtualiado/cron_debounce.vhd 2025/06/05.14:33:15 P.20131013
+FL /home/ise/ise_projs/ProjetoAtualiado/display_driver.vhd 2025/06/05.19:00:15 P.20131013
+FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_basq_PI.vhd 2025/06/09.17:10:26 P.20131013
+EN work/cron_basq_PI 1751432920 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_basq_PI.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/cron_basq_PI/Behavioral 1751432921 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_basq_PI.vhd \
+      EN work/cron_basq_PI 1751432920 CP work/debounce CP work/dspl_drv
+FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_debounce.vhd 2025/06/05.14:33:15 P.20131013
+EN work/debounce 1751432916 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_debounce.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/debounce/debounce 1751432917 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/cron_debounce.vhd \
+      EN work/debounce 1751432916
+FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd 2025/07/03.19:07:23 P.20131013
+EN work/dspl_drv 1751432918 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dspl_drv/dspl_drv 1751432919 \
+      FL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd \
+      EN work/dspl_drv 1751432918 CP with

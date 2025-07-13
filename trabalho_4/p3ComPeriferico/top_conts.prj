@@ -1,0 +1,7 @@
+vhdl work "vhdls_auxiliares/mult_div.vhd"
+vhdl work "vhdls_auxiliares/MIPS_S_Prt.vhd"
+vhdl work "../../t4_p2/25mhz/memory.vhd"
+vhdl work "vhdls_auxiliares/periferico.vhd"
+vhdl work "vhdls_auxiliares/MIPS_S_withBRAMS.vhd"
+vhdl work "../../../trabalho_3/cron_basq/display_driver.vhd"
+vhdl work "top_conts.vhd"

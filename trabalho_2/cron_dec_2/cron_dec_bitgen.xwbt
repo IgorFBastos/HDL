@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/ise_projs/cron_dec_2/cron_dec.ncd
+OUTFILE=/home/ise/ise_projs/cron_dec_2/cron_dec.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=/home/ise/ise_projs/cron_dec_2
+LICENSE=WebPack
+USER_INFO=8416_11442_1478797146_620

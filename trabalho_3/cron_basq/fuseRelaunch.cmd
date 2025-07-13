@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ise/ise_projs/ProjetoAtualiado/tb_cron_basq_PI_isim_beh.exe" -prj "/home/ise/ise_projs/ProjetoAtualiado/tb_cron_basq_PI_beh.prj" "work.tb_cron_basq_PI" 

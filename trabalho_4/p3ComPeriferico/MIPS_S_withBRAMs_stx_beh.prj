@@ -1,0 +1,4 @@
+vhdl isim_temp "../../../Distribution_V3.3/3_MIPS_S_Prt/VHDL/mult_div.vhd"
+vhdl isim_temp "../../t4_p2/memory.vhd"
+vhdl isim_temp "../../../Distribution_V3.3/3_MIPS_S_Prt/VHDL/MIPS_S_Prt.vhd"
+vhdl isim_temp "../../../Distribution_V3.3/3_MIPS_S_Prt/VHDL/MIPS_S_withBRAMS.vhd"

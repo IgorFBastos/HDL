@@ -1,0 +1,6 @@
+EN debounce NULL /home/ise/ise_projs/trabalho_3/cron_basq/cron_debounce.vhd sub00/vhpl00 1751432916
+AR debounce debounce /home/ise/ise_projs/trabalho_3/cron_basq/cron_debounce.vhd sub00/vhpl01 1751432917
+AR dspl_drv dspl_drv /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd sub00/vhpl03 1751432919
+EN dspl_drv NULL /home/ise/ise_projs/trabalho_3/cron_basq/display_driver.vhd sub00/vhpl02 1751432918
+EN cron_basq_pi NULL /home/ise/ise_projs/trabalho_3/cron_basq/cron_basq_PI.vhd sub00/vhpl04 1751432920
+AR cron_basq_pi behavioral /home/ise/ise_projs/trabalho_3/cron_basq/cron_basq_PI.vhd sub00/vhpl05 1751432921

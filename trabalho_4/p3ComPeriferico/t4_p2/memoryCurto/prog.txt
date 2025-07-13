@@ -1,0 +1,47 @@
+ Address    Code        Basic                     Source
+
+0x00400000  0x24130000  addiu $19,$0,0x000000014       li $s3, 0   # s3 = Centenas
+0x00400004  0x24120000  addiu $18,$0,0x000000015       li $s2, 0   # s2 = Dezenas
+0x00400008  0x24110000  addiu $17,$0,0x000000016       li $s1, 0   # s1 = Unidades
+0x0040000c  0x24100000  addiu $16,$0,0x000000017       li $s0, 0   # s0 = Décimos
+0x00400010  0x08100005  j 0x00400014          20       j main_loop
+0x00400014  0x3c011001  lui $1,0x00001001     27       la $t0, out_dec_s   # Carrega o endereço do ponteiro 'out_dec_s' para $t0.
+0x00400018  0x34280000  ori $8,$1,0x00000000       
+0x0040001c  0x8d080000  lw $8,0x00000000($8)  28       lw $t0, 0($t0)      # Carrega o valor do ponteiro (0x10008000) para $t0.
+0x00400020  0xa1100000  sb $16,0x00000000($8) 29       sb $s0, 0($t0)      # Armazena o byte do registrador $s0 no endereço de saída.
+0x00400024  0x3c011001  lui $1,0x00001001     32       la $t0, out_un
+0x00400028  0x34280004  ori $8,$1,0x00000004       
+0x0040002c  0x8d080000  lw $8,0x00000000($8)  33       lw $t0, 0($t0)
+0x00400030  0xa1110000  sb $17,0x00000000($8) 34       sb $s1, 0($t0)
+0x00400034  0x3c011001  lui $1,0x00001001     37       la $t0, out_dz
+0x00400038  0x34280008  ori $8,$1,0x00000008       
+0x0040003c  0x8d080000  lw $8,0x00000000($8)  38       lw $t0, 0($t0)
+0x00400040  0xa1120000  sb $18,0x00000000($8) 39       sb $s2, 0($t0)
+0x00400044  0x3c011001  lui $1,0x00001001     42       la $t0, out_ct
+0x00400048  0x3428000c  ori $8,$1,0x0000000c       
+0x0040004c  0x8d080000  lw $8,0x00000000($8)  43       lw $t0, 0($t0)
+0x00400050  0xa1130000  sb $19,0x00000000($8) 44       sb $s3, 0($t0)
+0x00400054  0x24090009  addiu $9,$0,0x0000000947       li $t1, 9                       # Carrega 9 em um temporário para comparação.
+0x00400058  0x16090004  bne $16,$9,0x00000004 48       bne $s0, $t1, continue_counting # Se décimos != 9, continua a contar.
+0x0040005c  0x16290003  bne $17,$9,0x00000003 49       bne $s1, $t1, continue_counting # Se unidades != 9, continua a contar.
+0x00400060  0x16490002  bne $18,$9,0x00000002 50       bne $s2, $t1, continue_counting # Se dezenas != 9, continua a contar.
+0x00400064  0x16690001  bne $19,$9,0x00000001 51       bne $s3, $t1, continue_counting # Se centenas != 9, continua a contar.
+0x00400068  0x08100028  j 0x004000a0          52       j halt                          # Se todos forem 9, o programa para.
+0x0040006c  0x0c100029  jal 0x004000a4        56       jal delay_real
+0x00400070  0x22100001  addi $16,$16,0x000000059       addi $s0, $s0, 1                # 1. Incrementa o DÉCIMO de segundo.
+0x00400074  0x2409000a  addiu $9,$0,0x0000000a60       li $t1, 10                      # Carrega 10 para verificar o estouro (carry).
+0x00400078  0x16090008  bne $16,$9,0x00000008 61       bne $s0, $t1, end_increment     # Se $s0 < 10, o incremento deste ciclo terminou.
+0x0040007c  0x24100000  addiu $16,$0,0x000000063       li $s0, 0                       # 2. Se $s0 chegou a 10, zera o DÉCIMO...
+0x00400080  0x22310001  addi $17,$17,0x000000064       addi $s1, $s1, 1                #    ...e incrementa a UNIDADE.
+0x00400084  0x16290005  bne $17,$9,0x00000005 65       bne $s1, $t1, end_increment     # Se $s1 < 10, terminou.
+0x00400088  0x24110000  addiu $17,$0,0x000000067       li $s1, 0                       # 3. Se $s1 chegou a 10, zera a UNIDADE...
+0x0040008c  0x22520001  addi $18,$18,0x000000068       addi $s2, $s2, 1                #    ...e incrementa a DEZENA.
+0x00400090  0x16490002  bne $18,$9,0x00000002 69       bne $s2, $t1, end_increment     # Se $s2 < 10, terminou.
+0x00400094  0x24120000  addiu $18,$0,0x000000072       li $s2, 0                       # 4. Se $s2 chegou a 10, zera a DEZENA...
+0x00400098  0x22730001  addi $19,$19,0x000000073       addi $s3, $s3, 1                #    ...e incrementa a CENTENA.
+0x0040009c  0x08100005  j 0x00400014          77       j main_loop
+0x004000a0  0x08100028  j 0x004000a0          81       j halt
+0x004000a4  0x240d0002  addiu $13,$0,0x000000089       li $t5, 2
+0x004000a8  0x21adffff  addi $13,$13,0xfffffff91       addi $t5, $t5, -1               # Decrementa o contador do loop.
+0x004000ac  0x15a0fffe  bne $13,$0,0xfffffffe 92       bne $t5, $zero, delay_real_loop # Se o contador não é zero, repete o loop.
+0x004000b0  0x03e00008  jr $31                93       jr $ra                          # Retorna para quem chamou a função.

@@ -1,0 +1,3 @@
+vhdl work "dspl_drv.vhd"
+vhdl work "cron_dec.vhd"
+vhdl work "tb_cron_dec.vhd"
