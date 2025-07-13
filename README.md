@@ -1,4 +1,4 @@
-# Projetos de Linguagens de Descrição de Hardware (HDL) - [2025.1]
+# Projetos de Linguagens de Descrição de Hardware (HDL) - 2025.1
 
 ## Sobre o Repositório
 
